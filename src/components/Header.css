@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .phone-number {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .account {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .currency,
+  .login {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,54 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f5f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.banner-content {
+    flex: 1;
+    max-width: 50%; /* Keeps the content width limited for balance */
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 36px;
+    color: #dd0000;
+}
+
+.banner-content p {
+    font-size: 24px;
+    color: #333;
+}
+
+.special-offer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.banner-image {
+    flex: 1;
+    max-width: 45%; /* Limits image width to prevent overflow */
+    height: auto;
+    display: flex;
+    justify-content: flex-end; /* Aligns the image to the right */
+    z-index: 1;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100%; /* Ensures image height does not exceed the container */
+    object-fit: contain; /* Keeps the image's aspect ratio */
+    object-position: right; /* Aligns the image to the right side */
+    border-radius: 5px;
+}
