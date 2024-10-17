@@ -1,22 +1,20 @@
 // Card.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ title, description, price, imageSrc }) => {
+const Card = ({ title, description, price, imageSrc, path }) => {
   return (
-    <div
-      className="card"
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/images/${imageSrc})`,
-        height: '400px', // Enforce fixed height
-      }}
-    >
-      <div className="card-content-overlay">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <p>Starts @ <strong>{price}</strong></p>
+    <Link to={path} className="card-link">
+      <div className="card">
+        <img src={imageSrc} alt={title} className="card-img-top" />
+        <div className="card-body">
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text">{description}</p>
+          <p className="card-price">Starts @ {price}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
