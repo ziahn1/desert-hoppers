@@ -5,15 +5,23 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="https://via.placeholder.com/150x50?text=Travelwings" alt="Travelwings Logo" />
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMg-pszCXabDQvYRDWC4MBZDnBLGr4XTknW6Bzw=s1360-w1360-h1020" alt="Travelwings Logo" />
       </div>
-      <div className="contact">
-        <span>Contact Us</span>
-        <a href="tel:+97145635800" className="phone-number">+971 4563 5800</a>
+      <div className="contact-info">
+        <a href="tel:+97145635800" className="phone-button">
+          {/* <i className="phone-icon"></i> +971 4563 5800 */}+971 4563 5800
+        </a>
+        <span className="contact-text">CONTACT US</span>
       </div>
-      <div className="account">
-        <a href="#" className="currency">AED</a>
-        <a href="#" className="login">My Account</a>
+      <div className="account-section">
+        <div className="language-currency">
+          <span className="flag-icon">🇬🇧</span>
+          <a href="#" className="language">EN</a> | 
+          <a href="#" className="currency">AED</a>
+        </div>
+        <a href="#" className="account">
+          <i className="account-icon">👤</i> My Account
+        </a>
       </div>
     </header>
   );

@@ -4,10 +4,10 @@ import Card from './Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const destinations = [
-  { title: 'MALDIVES', description: 'All Inclusive Package', price: 'AED 6,999', imageSrc: 'MALDIVES.jpg', path: '/maldives' },
-  { title: 'MAURITIUS', description: 'All Inclusive Package', price: 'AED 6,750', imageSrc: 'MAURITIUS.jpg', path: '/mauritius' },
-  { title: 'SEYCHELLES', description: 'All Inclusive Package', price: 'AED 5,999', imageSrc: 'SEYCHELLES.jpeg', path: '/seychelles' },
-  { title: 'INDONESIA', description: 'All Inclusive Package', price: 'AED 4,399', imageSrc: 'INDONESIA.jpeg', path: '/indonesia' },
+  { title: 'MALDIVES', description: 'All Inclusive Package', price: 'AED 6,999', imageSrc: '/images/MALDIVES.jpg', path: '/maldives' },
+  { title: 'MAURITIUS', description: 'All Inclusive Package', price: 'AED 6,750', imageSrc: '/images/MAURITIUS.jpg', path: '/mauritius' },
+  { title: 'SEYCHELLES', description: 'All Inclusive Package', price: 'AED 5,999', imageSrc: '/images/SEYCHELLES.jpeg', path: '/seychelles' },
+  { title: 'INDONESIA', description: 'All Inclusive Package', price: 'AED 4,399', imageSrc: '/images/INDONESIA.jpeg', path: '/indonesia' },
 ];
 
 const CardList = () => {
