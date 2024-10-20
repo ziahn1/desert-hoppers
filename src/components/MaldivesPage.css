@@ -129,3 +129,41 @@
     color: white;
   }
   
+  /* EnquiryFormModal.css */
+.modal-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.country-code {
+  background-color: #f1f1f1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ced4da;
+  border-right: none;
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+}
+
+button[type="submit"] {
+  background-color: #d9534f;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #c9302c;
+}

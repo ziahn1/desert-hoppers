@@ -5,8 +5,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipMg-pszCXabDQvYRDWC4MBZDnBLGr4XTknW6Bzw=s1360-w1360-h1020" alt="Travelwings Logo" />
-      <span className="logo_text">&nbsp;&nbsp;Desert Hoppers</span>
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMg-pszCXabDQvYRDWC4MBZDnBLGr4XTknW6Bzw=s1360-w1360-h1020" 
+        path="/"
+        alt="Travelwings Logo" />
+      <span className="logo_text" href='/'>&nbsp;&nbsp;Desert Hoppers</span>
       </div>
       <div className="contact-info">
         <a href="tel:+97145635800" className="phone-button">
