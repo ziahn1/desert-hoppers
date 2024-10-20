@@ -8,11 +8,14 @@ const Header = ({ onContactClick }) => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <nav className="navbar">
-
       <div className="logo-container">
-        <img src="https://deserthoppers.com/assets/images/logo.png" width="130" height="80" alt="Desert Hoppers Logo"></img>
+        <img src="https://deserthoppers.com/assets/images/logo.png" width="130" height="80" alt="Desert Hoppers Logo" />
         <a className="navbar-brand" href="/">Desert Hoppers</a>
       </div>
 
@@ -32,16 +35,17 @@ const Header = ({ onContactClick }) => {
         onClick={toggleSidebar}
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon">&#9776;</span>
       </button>
 
       {/* Sidebar for mobile view */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <button className="close-sidebar-btn" onClick={closeSidebar}>&times;</button> {/* Close button inside sidebar */}
         <ul className="navbar-nav">
           <li className="nav-item">
-          <div className="btn btn-success contact-us-btn" onClick={onContactClick}>
-            Contact Us
-          </div>
+            <div className="btn btn-success contact-us-btn" onClick={onContactClick}>
+              Contact Us
+            </div>
           </li>
           <li className="nav-item">
             <div className="w-100">Login</div>
@@ -52,7 +56,7 @@ const Header = ({ onContactClick }) => {
         </ul>
       </div>
 
-      {sidebarOpen && <div className="sidebar-backdrop" onClick={toggleSidebar}></div>}
+      {sidebarOpen && <div className="sidebar-backdrop" onClick={closeSidebar}></div>} {/* Click outside to close */}
     </nav>
   );
 };
