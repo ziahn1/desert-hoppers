@@ -1,131 +1,108 @@
-.header {
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap; /* This ensures the content wraps properly on smaller screens */
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo_text {
-  color: green;
-  font-size: 16px; /* Reduce font size for smaller screens */
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
-  flex-grow: 1; /* Allow the logo to expand as needed */
 }
 
-.logo img {
-  max-height: 50px;
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-grow: 1; /* Allow the contact info to expand */
-  justify-content: flex-end;
-}
-
-.phone-button {
-  background-color: darkolivegreen;
-  color: white;
-  padding: 5px 15px;
-  font-size: 16px;
+.navbar-brand {
+  margin-left: 5px;
+  font-size: 32px;
   font-weight: bold;
+  color: darkgreen;
   text-decoration: none;
+  font-family: 'Lobster', cursive;
+}
+
+/* Desktop/Laptop view options */
+.navbar-options {
   display: flex;
+  gap: 15px;
   align-items: center;
 }
 
-.contact-text {
-  font-size: 14px;
-  color: black;
+.contact-us-btn {
+  padding: 8px 15px;
 }
 
-.account-section {
+.login-btn, .signup-btn {
+  padding: 5px 20px;
+  margin-left: 10px; /* Space between login and sign up */
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+/* Sidebar Styles for Mobile */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
   display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-grow: 1; /* Allow account section to grow */
-  justify-content: flex-end;
+  flex-direction: column;
 }
 
-.language-currency {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.sidebar.open {
+  right: 0;
 }
 
-.language, .currency {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 14px;
+.nav-item {
+  margin-bottom: 20px;
 }
 
-.account {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  font-weight: bold;
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
-.account-icon {
-  margin-right: 5px;
-}
-
-/* Responsive Design */
+/* Mobile view adjustments */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 15px; /* Reduce padding for smaller screens */
+  .navbar-toggler {
+    display: block;
+    border: none;
+    background: none;
   }
 
-  .contact-info, .account-section {
-    justify-content: flex-start; /* Align sections to the start */
-    width: 100%; /* Full-width for smaller screens */
-    margin-top: 10px;
+  .navbar-options {
+    display: none; /* Hide desktop options in mobile view */
   }
 
-  .phone-button {
-    font-size: 14px;
-    padding: 5px 10px;
+  .logo-container img {
+    width: 100px;
+    height: auto;
   }
 
-  .language, .currency, .account {
-    font-size: 12px; /* Smaller font size for mobile devices */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo img {
-    max-height: 40px; /* Adjust the logo size */
+  .navbar-brand {
+    font-size: 24px;
   }
 
-  .phone-button {
-    font-size: 12px;
-    padding: 5px 8px;
+  .sidebar {
+    display: none;
   }
 
-  .account-section, .contact-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .language, .currency, .account {
-    font-size: 12px;
-  }
-
-  .header {
-    padding: 10px; /* Less padding for mobile devices */
+  .sidebar.open {
+    display: flex;
   }
 }
