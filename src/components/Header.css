@@ -9,8 +9,9 @@
 }
 
 .logo_text {
-  color: #333;
+  color: green;
   font-size: 16px; /* Reduce font size for smaller screens */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logo {
@@ -32,7 +33,7 @@
 }
 
 .phone-button {
-  background-color: red;
+  background-color: darkolivegreen;
   color: white;
   padding: 5px 15px;
   font-size: 16px;

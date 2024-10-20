@@ -10,6 +10,7 @@ import MaldivesPage from './components/MaldivesPage';
 import SeychellesPage from './components/SeychellesPage';
 import IndonesiaPage from './components/IndonesiaPage';
 import './App.css';
+import EnquiryFormModal from './components/EnquiryFormModal';
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/maldives" element={<MaldivesPage />} />
         <Route path="/seychelles" element={<SeychellesPage />} />
         <Route path="/indonesia" element={<IndonesiaPage />} />
+        <Route path="/enquire" element={<EnquiryFormModal/>} />
       </Routes>
       <Footer />
     </Router>
