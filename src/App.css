@@ -57,3 +57,35 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+  /* Search and Sort Bar */
+  .search-sort-bar {
+    width: 100%; /* Spread the bar across the entire page */
+    display: flex;
+    justify-content: space-between; /* Spread input and button */
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: add background color */
+    margin-bottom: 20px; /* Space between search bar and the next section */
+  }
+  
+  .search-sort-bar input {
+    flex-grow: 1; /* Make the input field take the remaining space */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow for input */
+    font-size: 16px; /* Adjust font size */
+  }
+  
+  .sort-btn {
+    padding: 15px 20px;
+    background-color: white; /* Optional: change button color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow for button */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
