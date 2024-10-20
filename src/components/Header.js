@@ -1,32 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onContactClick }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
   return (
-    <header className="header">
-      <div className="logo">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipMg-pszCXabDQvYRDWC4MBZDnBLGr4XTknW6Bzw=s1360-w1360-h1020" 
-        path="/"
-        alt="Travelwings Logo" />
-      <span className="logo_text" href='/'>&nbsp;&nbsp;Desert Hoppers</span>
+    <nav className="navbar">
+      <div className="logo-container">
+        <img src="https://deserthoppers.com/assets/images/logo.png" width="130" height="80" alt="Desert Hoppers Logo" />
+        <a className="navbar-brand" href="/">Desert Hoppers</a>
       </div>
-      <div className="contact-info">
-        <a href="tel:+97145635800" className="phone-button">
-          {/* <i className="phone-icon"></i> +971 4563 5800 */}+971 9999 0000
-        </a>
-        <span className="contact-text">CONTACT US</span>
-      </div>
-      <div className="account-section">
-        <div className="language-currency">
-          <span className="flag-icon">🇬🇧</span>
-          <a href="#" className="language">EN</a> | 
-          <a href="#" className="currency">AED</a>
+
+      {/* Desktop/Laptop view with Login, Sign Up, and Contact Us */}
+      <div className="navbar-options">
+        <div className="btn btn-success contact-us-btn" onClick={onContactClick}>
+          Contact Us
         </div>
-        <a href="#" className="account">
-          <i className="account-icon">👤</i> My Account
-        </a>
+        <div className="login-btn">Login</div>
+        <div className="signup-btn">Sign Up</div>
       </div>
-    </header>
+
+      {/* Mobile hamburger menu */}
+      <button
+        className="navbar-toggler"
+        type="button"
+        onClick={toggleSidebar}
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon">&#9776;</span>
+      </button>
+
+      {/* Sidebar for mobile view */}
+      <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <button className="close-sidebar-btn" onClick={closeSidebar}>&times;</button> {/* Close button inside sidebar */}
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <div className="btn btn-success contact-us-btn" onClick={onContactClick}>
+              Contact Us
+            </div>
+          </li>
+          <li className="nav-item">
+            <div className="w-100">Login</div>
+          </li>
+          <li className="nav-item">
+            <div className="w-100">Sign Up</div>
+          </li>
+        </ul>
+      </div>
+
+      {sidebarOpen && <div className="sidebar-backdrop" onClick={closeSidebar}></div>} {/* Click outside to close */}
+    </nav>
   );
 };
 
