@@ -35,8 +35,7 @@
 }
 
 .login-btn, .signup-btn {
-  padding: 5px 20px;
-  margin-left: 10px; /* Space between login and sign up */
+  margin-right: 20px;
 }
 
 .navbar-toggler {

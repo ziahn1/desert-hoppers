@@ -10,6 +10,7 @@ const Header = ({ onContactClick }) => {
 
   return (
     <nav className="navbar">
+
       <div className="logo-container">
         <img src="https://deserthoppers.com/assets/images/logo.png" width="130" height="80" alt="Desert Hoppers Logo"></img>
         <a className="navbar-brand" href="/">Desert Hoppers</a>
@@ -17,11 +18,11 @@ const Header = ({ onContactClick }) => {
 
       {/* Desktop/Laptop view with Login, Sign Up, and Contact Us */}
       <div className="navbar-options">
-        <button type="button" className="btn btn-success contact-us-btn" onClick={onContactClick}>
+        <div className="btn btn-success contact-us-btn" onClick={onContactClick}>
           Contact Us
-        </button>
-        <button type="button" className="btn btn-outline-dark login-btn">Login</button>
-        <button type="button" className="btn btn-outline-dark signup-btn">Sign Up</button>
+        </div>
+        <div className="login-btn">Login</div>
+        <div className="signup-btn">Sign Up</div>
       </div>
 
       {/* Mobile hamburger menu */}
@@ -38,15 +39,15 @@ const Header = ({ onContactClick }) => {
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <ul className="navbar-nav">
           <li className="nav-item">
-            <button type="button" className="btn btn-success w-100" onClick={onContactClick}>
-              Contact Us
-            </button>
+          <div className="btn btn-success contact-us-btn" onClick={onContactClick}>
+            Contact Us
+          </div>
           </li>
           <li className="nav-item">
-            <button type="button" className="btn btn-outline-dark w-100">Login</button>
+            <div className="w-100">Login</div>
           </li>
           <li className="nav-item">
-            <button type="button" className="btn btn-outline-dark w-100">Sign Up</button>
+            <div className="w-100">Sign Up</div>
           </li>
         </ul>
       </div>
