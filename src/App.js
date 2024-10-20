@@ -21,6 +21,13 @@ const App = () => {
           element={
             <>
               <Banner />
+              <div className="container">
+                {/* Search and Sort Section */}
+                <div className="search-sort-bar">
+                  <input type="text" placeholder="Search Package..." />
+                  <button className="sort-btn">Sort By</button>
+                </div>
+              </div>
               <div className="card-container">
                 <CardList />
               </div>

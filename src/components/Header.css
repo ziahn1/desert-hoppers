@@ -5,27 +5,30 @@
   background-color: #ffffff;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* This ensures the content wraps properly on smaller screens */
+}
+
+.logo_text {
+  color: #333;
+  font-size: 16px; /* Reduce font size for smaller screens */
 }
 
 .logo {
   display: flex;
   align-items: center;
+  flex-grow: 1; /* Allow the logo to expand as needed */
 }
 
 .logo img {
   max-height: 50px;
 }
 
-.tagline {
-  font-size: 12px;
-  color: #666;
-  margin-left: 10px;
-}
-
 .contact-info {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-grow: 1; /* Allow the contact info to expand */
+  justify-content: flex-end;
 }
 
 .phone-button {
@@ -39,10 +42,6 @@
   align-items: center;
 }
 
-.phone-icon {
-  margin-right: 5px;
-}
-
 .contact-text {
   font-size: 14px;
   color: black;
@@ -52,6 +51,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-grow: 1; /* Allow account section to grow */
+  justify-content: flex-end;
 }
 
 .language-currency {
@@ -85,25 +86,45 @@
   .header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px 15px; /* Reduce padding for smaller screens */
   }
 
-  .contact-info {
+  .contact-info, .account-section {
+    justify-content: flex-start; /* Align sections to the start */
+    width: 100%; /* Full-width for smaller screens */
     margin-top: 10px;
   }
-}
 
-@media (max-width: 480px) {
   .phone-button {
     font-size: 14px;
     padding: 5px 10px;
   }
 
-  .account-section {
+  .language, .currency, .account {
+    font-size: 12px; /* Smaller font size for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 40px; /* Adjust the logo size */
+  }
+
+  .phone-button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .account-section, .contact-info {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .language, .currency, .account {
     font-size: 12px;
+  }
+
+  .header {
+    padding: 10px; /* Less padding for mobile devices */
   }
 }

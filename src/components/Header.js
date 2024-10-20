@@ -6,10 +6,11 @@ const Header = () => {
     <header className="header">
       <div className="logo">
         <img src="https://lh3.googleusercontent.com/p/AF1QipMg-pszCXabDQvYRDWC4MBZDnBLGr4XTknW6Bzw=s1360-w1360-h1020" alt="Travelwings Logo" />
+      <span className="logo_text">&nbsp;&nbsp;Desert Hoppers</span>
       </div>
       <div className="contact-info">
         <a href="tel:+97145635800" className="phone-button">
-          {/* <i className="phone-icon"></i> +971 4563 5800 */}+971 4563 5800
+          {/* <i className="phone-icon"></i> +971 4563 5800 */}+971 9999 0000
         </a>
         <span className="contact-text">CONTACT US</span>
       </div>
