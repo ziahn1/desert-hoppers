@@ -35,12 +35,11 @@ const Header = ({ onContactClick }) => {
         onClick={toggleSidebar}
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon">&#9776;</span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
       {/* Sidebar for mobile view */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-        <button className="close-sidebar-btn" onClick={closeSidebar}>&times;</button> {/* Close button inside sidebar */}
         <ul className="navbar-nav">
           <li className="nav-item">
             <div className="btn btn-success contact-us-btn" onClick={onContactClick}>
