@@ -6,18 +6,18 @@
     padding: 60px 20px;
     color: white;
     text-align: center;
-  }
-  
-  .banner-content h1 {
+}
+
+.banner-content h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-  }
-  
-  .banner-content p {
+}
+
+.banner-content p {
     font-size: 1.2rem;
-  }
-  
-  .book-now {
+}
+
+.book-now {
     padding: 10px 20px;
     background-color: #e74c3c;
     color: white;
@@ -25,63 +25,88 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-  }
-  
-  .discount {
+}
+
+.discount {
     margin-top: 10px;
     font-size: 1rem;
     color: #d35400;
-  }
-  
-  /* Search and Sort Bar */
+}
+
+/* Responsive adjustments for the banner */
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 40vh;
+        padding: 40px 15px;
+    }
+
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Search and Sort Bar */
 .search-sort-bar {
-  width: 100%; /* Spread the bar across the entire page */
-  display: flex;
-  justify-content: space-between; /* Spread input and button */
-  align-items: center;
-  padding: 20px;
-  background-color: #f9f9f9; /* Optional: add background color */
-  margin-bottom: 20px; /* Space between search bar and the next section */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
 }
 
 .search-sort-bar input {
-  flex-grow: 1; /* Make the input field take the remaining space */
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow for input */
-  font-size: 16px; /* Adjust font size */
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
 }
 
 .sort-btn {
-  padding: 15px 20px;
-  background-color: white; /* Optional: change button color */
-  color: black;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow for button */
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 15px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-  
-  /* Package Cards */
-  /* .packages {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    gap: 15px;
-  } */
+/* Responsive adjustments for the search bar */
+@media screen and (max-width: 768px) {
+    .search-sort-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-  .package-cards{
+    .search-sort-bar input {
+        margin-bottom: 10px;
+    }
+
+    .sort-btn {
+        width: 100%;
+    }
+}
+
+/* Package Cards */
+.package-cards {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-    gap:10px;
-  }
-  
-  .package-card {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.package-card {
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 300px;
@@ -89,81 +114,99 @@
     padding-bottom: 10px;
     overflow: hidden;
     text-align: center;
-  }
-  
-  .package-card img {
+}
+
+.package-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
-  
-  .package-card h3 {
+}
+
+.package-card h3 {
     font-size: 1.2rem;
     margin: 10px 0;
-  }
-  
-  .package-tag {
+}
+
+.package-tag {
     background-color: red;
     color: white;
     padding: 5px;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  .details-btn, .enquire-btn {
+}
+
+.details-btn, .enquire-btn {
     padding: 10px;
     margin: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .details-btn {
+}
+
+.details-btn {
     background-color: white;
     color: black;
-  }
-  
-  .enquire-btn {
+}
+
+.enquire-btn {
     background-color: #e74c3c;
     color: white;
-  }
-  
-  /* EnquiryFormModal.css */
+}
+
+/* Responsive adjustments for package cards */
+@media screen and (max-width: 768px) {
+    .package-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-card {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .package-card {
+        width: 100%;
+    }
+}
+
+/* EnquiryFormModal.css */
 .modal-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .modal-header {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .modal-body {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .country-code {
-  background-color: #f1f1f1;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ced4da;
-  border-right: none;
-  display: flex;
-  align-items: center;
+    background-color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ced4da;
+    border-right: none;
+    display: flex;
+    align-items: center;
 }
 
 .form-control {
-  border: 1px solid #ced4da;
+    border: 1px solid #ced4da;
 }
 
 button[type="submit"] {
-  background-color: #d9534f;
-  border: none;
-  font-size: 1rem;
-  padding: 0.5rem;
+    background-color: #d9534f;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
 }
 
 button[type="submit"]:hover {
-  background-color: #c9302c;
+    background-color: #c9302c;
 }
